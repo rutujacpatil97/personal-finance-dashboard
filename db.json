@@ -1,0 +1,129 @@
+{
+  "transactions": [
+    {
+      "id": "1",
+      "title": "Salary",
+      "amount": 50000
+    },
+    {
+      "id": "2",
+      "title": "Freelance Project",
+      "amount": 12000
+    },
+    {
+      "id": "3",
+      "title": "Stock Dividend",
+      "amount": 3000
+    },
+    {
+      "id": "4",
+      "title": "Electricity Bill",
+      "amount": -1800
+    },
+    {
+      "id": "5",
+      "title": "Internet Bill",
+      "amount": -1200
+    },
+    {
+      "id": "6",
+      "title": "Groceries",
+      "amount": -3500
+    },
+    {
+      "id": "7",
+      "title": "Fuel",
+      "amount": -2000
+    },
+    {
+      "id": "8",
+      "title": "Coffee Shop",
+      "amount": -450
+    },
+    {
+      "id": "9",
+      "title": "Movie Ticket",
+      "amount": -600
+    },
+    {
+      "id": "10",
+      "title": "Gym Membership",
+      "amount": -1500
+    },
+    {
+      "id": "11",
+      "title": "Bonus",
+      "amount": 8000
+    },
+    {
+      "id": "12",
+      "title": "Mobile Recharge",
+      "amount": -699
+    },
+    {
+      "id": "13",
+      "title": "Online Course Refund",
+      "amount": 2500
+    },
+    {
+      "id": "14",
+      "title": "Restaurant Dinner",
+      "amount": -2200
+    },
+    {
+      "id": "15",
+      "title": "Transport",
+      "amount": -900
+    },
+    {
+      "id": "16",
+      "title": "Side Hustle Income",
+      "amount": 5000
+    },
+    {
+      "id": "17",
+      "title": "Shopping",
+      "amount": -4200
+    },
+    {
+      "id": "18",
+      "title": "Medical Expense",
+      "amount": -1600
+    },
+    {
+      "id": "19",
+      "title": "Insurance Cashback",
+      "amount": 1800
+    },
+    {
+      "id": "20",
+      "title": "Charity Donation",
+      "amount": -1000
+    },
+    {
+      "id": "21",
+      "title": "Book Purchase",
+      "amount": -750
+    },
+    {
+      "id": "22",
+      "title": "Interest Credit",
+      "amount": 950
+    },
+    {
+      "id": "23",
+      "title": "OTT Subscription",
+      "amount": -499
+    },
+    {
+      "id": "24",
+      "title": "Gift Received",
+      "amount": 300
+    },
+    {
+      "id": "25",
+      "title": "Laptop Repair",
+      "amount": -2800
+    }
+  ]
+}

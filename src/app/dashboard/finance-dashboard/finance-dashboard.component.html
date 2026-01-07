@@ -1,0 +1,13 @@
+<!-- Finance Dashboard Header -->
+<div class="dashboard-header">
+  <h2>Dashboard Summary</h2>
+  <div class="total-balance">
+    Total Balance: {{ finance.totalBalance() | currency : 'INR' }}
+  </div>
+</div>
+
+<p class="dashboard-summary">This dashboard helps you stay on top of your finances by instantly showing
+  recent transactions and your current balance. It makes it easier to
+  understand spending habits, recognize income and expense patterns, and make
+  confident financial decisions without reviewing the entire transaction
+  history.</p>

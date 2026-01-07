@@ -1,0 +1,62 @@
+<div class="dashboard-header">
+    <h2>Transactions Statement</h2>
+    <div class="total-balance">
+      Total Balance: {{ finance.totalBalance() | currency : 'INR' }}
+    </div>
+  </div>
+
+  <div class="add-transaction-wrapper">
+    <div class="add-transaction-header">
+      Add Transaction
+    </div>
+  
+    <form
+      [formGroup]="form"
+      (ngSubmit)="addTransaction()"
+      class="add-transaction">
+  
+      <input
+        type="text"
+        placeholder="Description"
+        formControlName="title" />
+  
+      <input
+        type="number"
+        placeholder="Amount"
+        formControlName="amount" />
+  
+      <select formControlName="type">
+        <option value="expense">Expense</option>
+        <option value="income">Income</option>
+      </select>
+  
+      <button type="submit" [disabled]="form.invalid">
+        Add
+      </button>
+    </form>
+  </div>
+  
+
+<!-- Search Bar -->
+<div class="search-bar">
+    <input type="text" placeholder="Search transactions..." (input)="onSearch($event)">
+</div>
+
+<div class="transaction-list">
+    <ng-container *ngIf="finance.transactions().length; else empty">
+  
+      <app-transaction-item
+        *ngFor="let tx of finance.transactions()"
+        [transaction]="tx"
+        (delete)="finance.deleteTransaction($event)">
+      </app-transaction-item>
+  
+    </ng-container>
+  
+    <ng-template #empty>
+      <div class="no-transactions">
+        No transactions found
+      </div>
+    </ng-template>
+  </div>
+  

@@ -1,0 +1,68 @@
+  .transaction-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 18px;
+    border-bottom: 1px solid #eaeaea;
+    font-size: 15px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .transaction-item:last-child {
+    border-bottom: none;
+  }
+  
+  .transaction-item:hover {
+    background-color: #f9fafb;
+  }
+  
+  .transaction-description {
+    font-weight: 500;
+    color: #2d2d2d;
+  }
+  
+  .transaction-amount {
+    font-weight: 600;
+    min-width: 120px;
+    text-align: right;
+  }
+
+  .delete-btn {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #f44336;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #f44336;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+    outline: none;
+    font-weight: 800;
+  
+    i {
+      font-size: 40px;
+      line-height: 1;
+    }
+  
+    &:hover {
+      background-color: rgba(244, 67, 54, 0.08);
+      transform: scale(1.05);
+    }
+  
+    &:active {
+      transform: scale(0.95);
+    }
+  
+    &:focus-visible {
+      box-shadow: 0 0 0 3px rgba(244, 67, 54, 0.25);
+    }
+  }
+  
+  
+
+
+  
