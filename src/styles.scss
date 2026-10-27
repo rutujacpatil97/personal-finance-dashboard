@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* You can add global styles to this file, and also import other style files */
 
 *{
@@ -21,3 +22,62 @@
       color: #1c8133;
     }
   }
+=======
+/* Global styles */
+
+:root {
+  --navy: #0f3156;
+  --navy-light: #1d4a7a;
+  --bg: #f4f6fa;
+  --card: #ffffff;
+  --border: #e5e8ee;
+  --text: #2b2f38;
+  --muted: #6b7280;
+  --green: #1c8133;
+  --red: #dc3545;
+  --content-width: 1100px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/* Shared by the dashboard and transactions pages */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: calc(var(--content-width) - 40px);
+  margin: 32px auto 20px;
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  .total-balance {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--green);
+  }
+}
+
+/* side space on small screens */
+app-finance-dashboard,
+app-transaction-list {
+  display: block;
+  padding: 0 20px;
+}
+>>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)

@@ -11,3 +11,146 @@
   understand spending habits, recognize income and expense patterns, and make
   confident financial decisions without reviewing the entire transaction
   history.</p>
+
+<!-- Income / expenses / savings -->
+<div class="stats">
+  <div class="stat-card">
+    <span class="stat-label">Income</span>
+    <span class="stat-value income">{{ income() | currency : 'INR' : 'symbol' : '1.0-0' }}</span>
+  </div>
+  <div class="stat-card">
+    <span class="stat-label">Expenses</span>
+    <span class="stat-value expense">{{ expenses() | currency : 'INR' : 'symbol' : '1.0-0' }}</span>
+  </div>
+  <div class="stat-card">
+    <span class="stat-label">Savings Rate</span>
+    <span class="stat-value">{{ savingsRate() }}%</span>
+  </div>
+</div>
+
+<!-- Trend and categories side by side -->
+<div class="two-col">
+
+<!-- Monthly trend -->
+<div class="card">
+  <h3>Income vs expenses (last 6 months)</h3>
+
+  <svg viewBox="0 0 640 260" class="trend">
+    <g *ngFor="let g of trend().grid">
+      <line [attr.x1]="trend().left" [attr.x2]="trend().right" [attr.y1]="g.y" [attr.y2]="g.y"></line>
+      <text [attr.x]="trend().left - 8" [attr.y]="g.y + 4" text-anchor="end">{{ g.label }}</text>
+    </g>
+
+    <text *ngFor="let l of trend().labels" [attr.x]="l.x" y="250" text-anchor="middle">{{ l.text }}</text>
+
+    <polyline class="line income" [attr.points]="trend().incomePoints"></polyline>
+    <polyline class="line expense" [attr.points]="trend().expensePoints"></polyline>
+
+    <circle
+      *ngFor="let d of trend().dots"
+      class="point"
+      r="4"
+      [attr.cx]="d.x"
+      [attr.cy]="d.y"
+      [attr.fill]="d.color">
+      <title>{{ d.tip }}</title>
+    </circle>
+  </svg>
+
+  <div class="trend-legend">
+    <span><span class="dot income-dot"></span> Income</span>
+    <span><span class="dot expense-dot"></span> Expenses</span>
+  </div>
+</div>
+
+<!-- Spending by category -->
+<div class="card">
+  <h3>Where your money goes</h3>
+
+  <div class="chart-row" *ngIf="categories().length; else noExpenses">
+    <div class="donut-wrapper">
+      <svg viewBox="0 0 42 42" class="donut">
+        <circle class="ring" cx="21" cy="21" r="15.9155"></circle>
+        <circle
+          *ngFor="let c of categories()"
+          cx="21"
+          cy="21"
+          r="15.9155"
+          class="segment"
+          [attr.stroke]="c.color"
+          [attr.stroke-dasharray]="c.dash"
+          [attr.stroke-dashoffset]="c.offset">
+          <title>{{ c.name }}: {{ c.percent | number : '1.0-0' }}%</title>
+        </circle>
+      </svg>
+      <div class="donut-center">
+        <span class="donut-label">Spent</span>
+        <span class="donut-total">{{ expenses() | currency : 'INR' : 'symbol' : '1.0-0' }}</span>
+      </div>
+    </div>
+
+    <ul class="legend">
+      <li *ngFor="let c of categories()">
+        <span class="dot" [style.background]="c.color"></span>
+        <span class="legend-name">{{ c.name }}</span>
+        <span class="legend-amount">{{ c.total | currency : 'INR' : 'symbol' : '1.0-0' }}</span>
+        <span class="legend-percent">{{ c.percent | number : '1.0-0' }}%</span>
+      </li>
+    </ul>
+  </div>
+
+  <ng-template #noExpenses>
+    <p class="empty">No expenses yet, add some transactions to see your chart.</p>
+  </ng-template>
+</div>
+
+</div>
+
+<!-- Budgets and tips side by side -->
+<div class="two-col">
+
+<!-- Budgets -->
+<div class="card">
+  <h3>Monthly budgets</h3>
+  <p class="card-note">Spending this month against the limit you set. Type a limit and press Enter; clear it to remove the budget.</p>
+
+  <div class="budget-row" *ngFor="let b of budgetRows()">
+    <div class="budget-top">
+      <span class="dot" [style.background]="b.color"></span>
+      <span class="budget-name">{{ b.category }}</span>
+      <span class="budget-amounts">
+        {{ b.spent | currency : 'INR' : 'symbol' : '1.0-0' }}
+        <ng-container *ngIf="b.limit">of {{ b.limit | currency : 'INR' : 'symbol' : '1.0-0' }}</ng-container>
+      </span>
+      <input
+        type="number"
+        min="0"
+        placeholder="Set limit"
+        [value]="b.limit || ''"
+        (change)="onBudgetChange(b.category, $event)">
+    </div>
+
+    <div class="bar" *ngIf="b.limit">
+      <div class="bar-fill" [ngClass]="b.status" [style.width.%]="b.percent"></div>
+    </div>
+
+    <p class="over-note" *ngIf="b.status === 'over'">
+      Over budget by {{ b.spent - b.limit | currency : 'INR' : 'symbol' : '1.0-0' }}
+    </p>
+  </div>
+</div>
+
+<!-- Personalised advice -->
+<div class="card">
+  <h3>Smart tips for you</h3>
+
+  <ul class="advice-list" *ngIf="advice().length; else noAdvice">
+    <li *ngFor="let a of advice()" [ngClass]="a.type">{{ a.text }}</li>
+  </ul>
+
+  <ng-template #noAdvice>
+    <p class="empty">Add a few transactions and your personal tips will show up here.</p>
+  </ng-template>
+</div>
+
+</div>

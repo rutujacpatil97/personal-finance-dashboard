@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Global resets */
 * {
     box-sizing: border-box;
@@ -44,3 +45,46 @@
 
   
   
+=======
+header {
+  background-color: var(--navy);
+  color: white;
+  padding: 18px 20px;
+  text-align: center;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+
+  h1 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+  padding: 0 20px;
+
+  a {
+    text-decoration: none;
+    color: var(--navy);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 8px 20px;
+    border-radius: 20px;
+    transition: background-color 0.2s, color 0.2s;
+
+    &:hover {
+      background-color: #e3e9f2;
+    }
+
+    &.active {
+      background-color: var(--navy);
+      color: white;
+    }
+  }
+}
+>>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)

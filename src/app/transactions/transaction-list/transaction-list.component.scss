@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .transaction-list {
     max-width: 700px;
     margin: 20px auto;
@@ -130,3 +131,171 @@
   
 
   
+=======
+.add-transaction-wrapper {
+  max-width: calc(var(--content-width) - 40px);
+  margin: 0 auto 20px;
+  padding: 16px;
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.add-transaction-header {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+
+.add-transaction {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.4fr 1.2fr auto;
+  gap: 10px;
+  align-items: center;
+
+  input,
+  select {
+    height: 40px;
+    padding: 0 12px;
+    font-size: 14px;
+    color: var(--text);
+    background: #fff;
+    border: 1px solid #d5dae3;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+    &:focus {
+      border-color: var(--navy);
+      box-shadow: 0 0 0 3px rgba(15, 49, 86, 0.12);
+    }
+
+    &.ng-invalid.ng-touched {
+      border-color: var(--red);
+    }
+  }
+
+  button {
+    height: 40px;
+    padding: 0 22px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    background: var(--navy);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+
+    &:hover:not(:disabled) {
+      background: var(--navy-light);
+    }
+
+    &:disabled {
+      background: #a9b5c5;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.search-bar {
+  display: flex;
+  gap: 10px;
+  max-width: calc(var(--content-width) - 40px);
+  margin: 0 auto 16px;
+
+  input {
+    flex: 1;
+    height: 42px;
+    padding: 0 14px;
+    font-size: 15px;
+    color: var(--text);
+    background-color: #fff;
+    border: 1px solid #d5dae3;
+    border-radius: 8px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+    &:focus {
+      outline: none;
+      border-color: var(--navy);
+      box-shadow: 0 0 0 3px rgba(15, 49, 86, 0.12);
+    }
+
+    &::placeholder {
+      color: #9ca3af;
+    }
+  }
+
+  .export-btn {
+    height: 42px;
+    padding: 0 18px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--navy);
+    background: #fff;
+    border: 1px solid var(--navy);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+
+    &:hover:not(:disabled) {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.transaction-list {
+  max-width: calc(var(--content-width) - 40px);
+  margin: 0 auto 40px;
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.no-transactions {
+  padding: 24px;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* tablets: two rows of fields */
+@media (max-width: 900px) {
+  .add-transaction {
+    grid-template-columns: repeat(3, 1fr);
+
+    .title-field {
+      grid-column: span 2;
+    }
+
+    button {
+      grid-column: 1 / -1;
+      justify-self: end;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .add-transaction {
+    grid-template-columns: 1fr;
+
+    .title-field {
+      grid-column: auto;
+    }
+  }
+}
+
+/* hide the number input arrows */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+>>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)

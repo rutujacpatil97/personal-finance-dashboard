@@ -2,6 +2,12 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { Subject, debounceTime, distinctUntilChanged, takeUntil } from 'rxjs';
 import { FinanceService } from '../../services/finance.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+<<<<<<< HEAD
+=======
+import { EXPENSE_CATEGORIES, INCOME_CATEGORIES } from '../../models/categories';
+import { todayString } from '../../utils/dates';
+import { exportTransactionsCsv } from '../../utils/export-csv';
+>>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)
 
 @Component({
   selector: 'app-transaction-list',
@@ -17,6 +23,12 @@ export class TransactionListComponent {
 
   form!: FormGroup;
 
+<<<<<<< HEAD
+=======
+  // the category list changes when you switch between expense and income
+  categoryOptions = EXPENSE_CATEGORIES;
+
+>>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)
   ngOnInit() {
     this.finance.loadTransactions();
 
@@ -34,7 +46,20 @@ export class TransactionListComponent {
       title: ['', Validators.required],
       amount: [null, [Validators.required, Validators.min(1)]],
       type: ['expense', Validators.required],
+<<<<<<< HEAD
     });
+=======
+      category: [EXPENSE_CATEGORIES[0].name, Validators.required],
+      date: [todayString(), Validators.required],
+    });
+
+    this.form.get('type')!.valueChanges
+      .pipe(takeUntil(this.destroy$))
+      .subscribe((type) => {
+        this.categoryOptions = type === 'income' ? INCOME_CATEGORIES : EXPENSE_CATEGORIES;
+        this.form.get('category')!.setValue(this.categoryOptions[0].name);
+      });
+>>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)
   }
 
   onSearch(event: Event) {
@@ -52,15 +77,36 @@ export class TransactionListComponent {
   addTransaction() {
     if (this.form.invalid) return;
 
+<<<<<<< HEAD
     const { title, amount, type } = this.form.value;
+=======
+    const { title, amount, type, category, date } = this.form.value;
+>>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)
 
     this.finance.addTransaction({
       id: this.getNextId(),
       title,
       amount: type === 'expense' ? -Math.abs(amount) : Math.abs(amount),
+<<<<<<< HEAD
     });
 
     this.form.reset({ type: 'expense' });
+=======
+      category,
+      date,
+    });
+
+    this.form.reset({
+      type: 'expense',
+      category: EXPENSE_CATEGORIES[0].name,
+      date: todayString(),
+    });
+  }
+
+  exportCsv() {
+    // exports whatever is currently shown in the list (so it follows the search)
+    exportTransactionsCsv(this.finance.transactions());
+>>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)
   }
 
   ngOnDestroy() {

@@ -1,5 +1,6 @@
 <div class="transaction-item">
 
+<<<<<<< HEAD
     <span class="transaction-description">
       {{ transaction.title }}
     </span>
@@ -17,3 +18,27 @@
   
   </div>
   
+=======
+  <div class="transaction-info">
+    <span class="transaction-description">
+      {{ transaction.title }}
+    </span>
+
+    <span class="transaction-meta">
+      <span class="category-dot" [style.background]="categoryColor"></span>
+      {{ transaction.category }} · {{ transaction.date | date : 'd MMM y' }}
+    </span>
+  </div>
+
+  <span class="transaction-amount" [appAmountColor]="transaction.amount">
+    {{ transaction.amount | currency:'INR' }}
+    <button
+      class="delete-btn"
+      (click)="onDelete()"
+      aria-label="Delete transaction">
+      ✕
+    </button>
+  </span>
+
+</div>
+>>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)
