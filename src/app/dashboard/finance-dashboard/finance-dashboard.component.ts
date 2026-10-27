@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-import { Component, effect } from '@angular/core';
-import { FinanceService } from '../../services/finance.service';
-=======
 import { Component, computed, effect } from '@angular/core';
 import { FinanceService } from '../../services/finance.service';
 import { getAdvice, getCategories } from '../../utils/spending';
 import { getBudgetRows } from '../../utils/budgets';
 import { buildTrendChart, getMonthlyTotals } from '../../utils/trends';
->>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)
 
 @Component({
   selector: 'app-finance-dashboard',
@@ -16,8 +11,6 @@ import { buildTrendChart, getMonthlyTotals } from '../../utils/trends';
 })
 export class FinanceDashboardComponent {
 
-<<<<<<< HEAD
-=======
   income = computed(() =>
     this.finance.allTransactions()
       .filter((t) => t.amount > 0)
@@ -57,7 +50,6 @@ export class FinanceDashboardComponent {
     })
   );
 
->>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)
   constructor(public finance : FinanceService) {
     effect(() => {
       console.log(
@@ -77,15 +69,12 @@ export class FinanceDashboardComponent {
 
   ngOnInit() {
     this.finance.loadTransactions();
-<<<<<<< HEAD
-=======
     this.finance.loadBudgets();
   }
 
   onBudgetChange(category: string, event: Event) {
     const value = Number((event.target as HTMLInputElement).value);
     this.finance.setBudget(category, value);
->>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)
   }
   
 }

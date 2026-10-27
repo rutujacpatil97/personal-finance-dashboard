@@ -17,10 +17,7 @@
   
       <input
         type="text"
-<<<<<<< HEAD
-=======
         class="title-field"
->>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)
         placeholder="Description"
         formControlName="title" />
   
@@ -34,15 +31,12 @@
         <option value="income">Income</option>
       </select>
   
-<<<<<<< HEAD
-=======
       <select formControlName="category">
         <option *ngFor="let c of categoryOptions" [value]="c.name">{{ c.name }}</option>
       </select>
 
       <input type="date" formControlName="date" />
 
->>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)
       <button type="submit" [disabled]="form.invalid">
         Add
       </button>
@@ -53,8 +47,6 @@
 <!-- Search Bar -->
 <div class="search-bar">
     <input type="text" placeholder="Search transactions..." (input)="onSearch($event)">
-<<<<<<< HEAD
-=======
     <button
       type="button"
       class="export-btn"
@@ -62,7 +54,6 @@
       [disabled]="!finance.transactions().length">
       Export CSV
     </button>
->>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)
 </div>
 
 <div class="transaction-list">

@@ -3,273 +3,174 @@
     {
       "id": "1",
       "title": "Salary",
-<<<<<<< HEAD
-      "amount": 50000
-=======
       "amount": 50000,
       "category": "Salary",
       "date": "2026-10-01"
->>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)
     },
     {
       "id": "2",
       "title": "Freelance Project",
-<<<<<<< HEAD
-      "amount": 12000
-=======
       "amount": 12000,
       "category": "Freelance",
       "date": "2026-10-08"
->>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)
     },
     {
       "id": "3",
       "title": "Stock Dividend",
-<<<<<<< HEAD
-      "amount": 3000
-=======
       "amount": 3000,
       "category": "Investments",
       "date": "2026-09-15"
->>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)
     },
     {
       "id": "4",
       "title": "Electricity Bill",
-<<<<<<< HEAD
-      "amount": -1800
-=======
       "amount": -1800,
       "category": "Bills & Utilities",
       "date": "2026-10-05"
->>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)
     },
     {
       "id": "5",
       "title": "Internet Bill",
-<<<<<<< HEAD
-      "amount": -1200
-=======
       "amount": -1200,
       "category": "Bills & Utilities",
       "date": "2026-10-06"
->>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)
     },
     {
       "id": "6",
       "title": "Groceries",
-<<<<<<< HEAD
-      "amount": -3500
-=======
       "amount": -3500,
       "category": "Food & Dining",
       "date": "2026-10-10"
->>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)
     },
     {
       "id": "7",
       "title": "Fuel",
-<<<<<<< HEAD
-      "amount": -2000
-=======
       "amount": -2000,
       "category": "Transport",
       "date": "2026-10-12"
->>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)
     },
     {
       "id": "8",
       "title": "Coffee Shop",
-<<<<<<< HEAD
-      "amount": -450
-=======
       "amount": -450,
       "category": "Food & Dining",
       "date": "2026-10-14"
->>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)
     },
     {
       "id": "9",
       "title": "Movie Ticket",
-<<<<<<< HEAD
-      "amount": -600
-=======
       "amount": -600,
       "category": "Entertainment",
       "date": "2026-10-17"
->>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)
     },
     {
       "id": "10",
       "title": "Gym Membership",
-<<<<<<< HEAD
-      "amount": -1500
-=======
       "amount": -1500,
       "category": "Health & Fitness",
       "date": "2026-10-03"
->>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)
     },
     {
       "id": "11",
       "title": "Bonus",
-<<<<<<< HEAD
-      "amount": 8000
-=======
       "amount": 8000,
       "category": "Salary",
       "date": "2026-09-28"
->>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)
     },
     {
       "id": "12",
       "title": "Mobile Recharge",
-<<<<<<< HEAD
-      "amount": -699
-=======
       "amount": -699,
       "category": "Bills & Utilities",
       "date": "2026-10-09"
->>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)
     },
     {
       "id": "13",
       "title": "Online Course Refund",
-<<<<<<< HEAD
-      "amount": 2500
-=======
       "amount": 2500,
       "category": "Other Income",
       "date": "2026-09-20"
->>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)
     },
     {
       "id": "14",
       "title": "Restaurant Dinner",
-<<<<<<< HEAD
-      "amount": -2200
-=======
       "amount": -2200,
       "category": "Food & Dining",
       "date": "2026-10-19"
->>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)
     },
     {
       "id": "15",
       "title": "Transport",
-<<<<<<< HEAD
-      "amount": -900
-=======
       "amount": -900,
       "category": "Transport",
       "date": "2026-10-15"
->>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)
     },
     {
       "id": "16",
       "title": "Side Hustle Income",
-<<<<<<< HEAD
-      "amount": 5000
-=======
       "amount": 5000,
       "category": "Freelance",
       "date": "2026-09-12"
->>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)
     },
     {
       "id": "17",
       "title": "Shopping",
-<<<<<<< HEAD
-      "amount": -4200
-=======
       "amount": -4200,
       "category": "Shopping",
       "date": "2026-10-21"
->>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)
     },
     {
       "id": "18",
       "title": "Medical Expense",
-<<<<<<< HEAD
-      "amount": -1600
-=======
       "amount": -1600,
       "category": "Health & Fitness",
       "date": "2026-09-22"
->>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)
     },
     {
       "id": "19",
       "title": "Insurance Cashback",
-<<<<<<< HEAD
-      "amount": 1800
-=======
       "amount": 1800,
       "category": "Other Income",
       "date": "2026-08-30"
->>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)
     },
     {
       "id": "20",
       "title": "Charity Donation",
-<<<<<<< HEAD
-      "amount": -1000
-=======
       "amount": -1000,
       "category": "Giving",
       "date": "2026-09-05"
->>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)
     },
     {
       "id": "21",
       "title": "Book Purchase",
-<<<<<<< HEAD
-      "amount": -750
-=======
       "amount": -750,
       "category": "Shopping",
       "date": "2026-09-18"
->>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)
     },
     {
       "id": "22",
       "title": "Interest Credit",
-<<<<<<< HEAD
-      "amount": 950
-=======
       "amount": 950,
       "category": "Investments",
       "date": "2026-10-02"
->>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)
     },
     {
       "id": "23",
       "title": "OTT Subscription",
-<<<<<<< HEAD
-      "amount": -499
-=======
       "amount": -499,
       "category": "Entertainment",
       "date": "2026-10-04"
->>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)
     },
     {
       "id": "24",
       "title": "Gift Received",
-<<<<<<< HEAD
-      "amount": 300
-=======
       "amount": 300,
       "category": "Other Income",
       "date": "2026-10-11"
->>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)
     },
     {
       "id": "25",
       "title": "Laptop Repair",
-<<<<<<< HEAD
-      "amount": -2800
-=======
       "amount": -2800,
       "category": "Other",
       "date": "2026-09-25"
@@ -517,7 +418,6 @@
       "id": "Entertainment",
       "category": "Entertainment",
       "limit": 1500
->>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)
     }
   ]
 }

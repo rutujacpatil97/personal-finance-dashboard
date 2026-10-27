@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-/* You can add global styles to this file, and also import other style files */
-
-*{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-}
-
-.dashboard-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 20px;
-  
-    h2 {
-      font-size: 1.6rem;
-      color: #0f3156;
-    }
-  
-    .total-balance {
-      font-size: 1.4rem;
-      font-weight: bold;
-      color: #1c8133;
-    }
-  }
-=======
 /* Global styles */
 
 :root {
@@ -80,4 +55,3 @@ app-transaction-list {
   display: block;
   padding: 0 20px;
 }
->>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)

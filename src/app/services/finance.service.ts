@@ -1,20 +1,14 @@
 import { Injectable, computed, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Transaction } from '../models/transaction';
-<<<<<<< HEAD
-=======
 import { Budget } from '../models/budget';
->>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)
 
 @Injectable({ providedIn: 'root' })
 export class FinanceService {
 
   allTransactions = signal<Transaction[]>([]);
   filteredTransactions = signal<Transaction[]>([]);
-<<<<<<< HEAD
-=======
   budgets = signal<Budget[]>([]);
->>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)
 
   transactions = this.filteredTransactions.asReadonly();
 
@@ -66,12 +60,6 @@ export class FinanceService {
 
     this.filteredTransactions.set(
       this.allTransactions().filter((tx) =>
-<<<<<<< HEAD
-        tx.title.toLowerCase().includes(value)
-      )
-    );
-  }
-=======
         tx.title.toLowerCase().includes(value) ||
         (tx.category || '').toLowerCase().includes(value)
       )
@@ -110,5 +98,4 @@ export class FinanceService {
         });
     }
   }
->>>>>>> aa1bc4e (Few improvements in dashboard with graphs and smart tips)
 }
