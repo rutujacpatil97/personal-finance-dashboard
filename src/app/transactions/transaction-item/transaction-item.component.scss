@@ -1,0 +1,77 @@
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border);
+  font-size: 15px;
+  transition: background-color 0.2s ease;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:hover {
+    background-color: #f8fafc;
+  }
+}
+
+.transaction-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.transaction-description {
+  font-weight: 500;
+  color: var(--text);
+}
+
+.transaction-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.category-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.transaction-amount {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  min-width: 140px;
+  font-weight: 600;
+}
+
+.delete-btn {
+  width: 26px;
+  height: 26px;
+  border: none;
+  border-radius: 50%;
+  background-color: #f3f4f6;
+  color: #9ca3af;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  font-size: 12px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  outline: none;
+
+  &:hover {
+    background-color: #fde8ea;
+    color: var(--red);
+  }
+
+  &:focus-visible {
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.25);
+  }
+}

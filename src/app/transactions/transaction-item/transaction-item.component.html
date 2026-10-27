@@ -1,0 +1,24 @@
+<div class="transaction-item">
+
+  <div class="transaction-info">
+    <span class="transaction-description">
+      {{ transaction.title }}
+    </span>
+
+    <span class="transaction-meta">
+      <span class="category-dot" [style.background]="categoryColor"></span>
+      {{ transaction.category }} · {{ transaction.date | date : 'd MMM y' }}
+    </span>
+  </div>
+
+  <span class="transaction-amount" [appAmountColor]="transaction.amount">
+    {{ transaction.amount | currency:'INR' }}
+    <button
+      class="delete-btn"
+      (click)="onDelete()"
+      aria-label="Delete transaction">
+      ✕
+    </button>
+  </span>
+
+</div>
